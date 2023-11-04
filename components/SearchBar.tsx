@@ -69,7 +69,9 @@ const SearchBar = () => {
                           `/country?name=${country.name.official}&currency=${
                             Object.keys(country.currencies)[0]
                           }&callingCode=${country.idd.root.substring(1)}${
-                            country.idd.suffixes[0]
+                            country.idd.root.substring(1) !== "1"
+                              ? country.idd.suffixes[0]
+                              : ""
                           }`
                         )
                       }

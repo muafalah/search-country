@@ -1,4 +1,3 @@
-import Flags from "country-flag-icons/react/3x2";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
@@ -25,14 +24,22 @@ const InfoCountry = ({
 }: InfoCountryProps) => {
   return (
     <>
-      <div className="flex flex-col gap-2 mb-12">
+      <div className="flex flex-col gap-4 mb-12">
         <div className="flex gap-2">
           <h1 className="font-bold text-4xl md:text-5xl">{name}</h1>
-          <Flags.ID title={name} className="w-12" />
+          <Image
+            alt="flag-country"
+            width="400"
+            height="400"
+            src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${flag}.svg`}
+            className="w-14"
+          />
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 overflow-y-auto">
           {altSpellings?.map((spelling) => (
-            <Badge key={spelling}>{spelling}</Badge>
+            <Badge key={spelling} className="min-w-fit">
+              {spelling}
+            </Badge>
           ))}
         </div>
       </div>
@@ -45,7 +52,7 @@ const InfoCountry = ({
             <h1 className="font-bold text-4xl md:text-5xl text-violet-500 space-x-4">
               {latlng?.map((item, index) => (
                 <span key={index}>
-                  {item}.0
+                  {parseFloat(item.toFixed(1))}
                   {latlng.length - 1 === index ? "" : ","}
                 </span>
               ))}

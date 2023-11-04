@@ -25,7 +25,7 @@ export default async function Country({
         capital={dataCountry[0].capital}
         region={dataCountry[0].region}
         subregion={dataCountry[0].subregion}
-        flag={dataCountry[0].flag}
+        flag={dataCountry[0].cca2}
       />
       <div className="flex flex-col md:flex-row gap-6 mt-12">
         <InfoCallingCode

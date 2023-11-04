@@ -20,6 +20,10 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+
+---
+
+
 The project was built using the technologies:
 
 - **Typescript**
@@ -31,6 +35,10 @@ The project was built using the technologies:
 - **Lucide React.**
 - **Country Flag Icons**
 
-To view the demo website, you can go to this URL:
+
+---
+
+
+To see the demo website, you can go to this URL:
 
 https://search-country-ifaamrillah.vercel.app
